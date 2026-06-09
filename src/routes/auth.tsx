@@ -145,6 +145,7 @@ function AuthPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  autoComplete="email"
                   placeholder="you@company.com"
                   className="w-full bg-background/60 border border-hairline rounded-lg pl-9 pr-3 py-2.5 text-sm focus:border-primary outline-none transition"
                 />
