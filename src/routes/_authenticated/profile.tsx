@@ -99,6 +99,7 @@ function ProfilePage() {
                 <Field label="Display name">
                   <input
                     type="text"
+                    autoFocus
                     value={displayName}
                     onChange={(e) => setDisplayName(e.target.value)}
                     className="w-full bg-background/60 border border-hairline rounded-lg px-3 py-2.5 text-sm focus:border-primary outline-none transition"
