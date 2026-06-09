@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
@@ -74,7 +75,7 @@ function ResultsView({ audit }: { audit: FullAudit }) {
     optimized: i < 2 ? baseSpend : Math.round(baseSpend - ((baseSpend - targetSpend) * (i - 1)) / 4),
   }));
 
-  const toolMeta = (toolId: string) => TOOLS.find((t) => t.id === toolId);
+  const toolMeta = useCallback((toolId: string) => TOOLS.find((t) => t.id === toolId), []);
 
   return (
     <div className="relative noise min-h-screen">
