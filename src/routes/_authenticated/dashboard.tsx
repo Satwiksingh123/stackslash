@@ -105,7 +105,7 @@ function DashboardPage() {
                   to="/audit"
                   className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground font-medium px-5 py-2.5 text-sm shadow-glow-mint hover:scale-[1.02] transition-transform"
                 >
-                  <Plus className="w-4 h-4" /> Run free audit
+                  <Plus className="w-4 h-4" /> Start your first audit
                 </Link>
               </div>
             ) : (
