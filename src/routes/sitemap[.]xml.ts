@@ -12,7 +12,8 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/audit", changefreq: "weekly", priority: "0.9" },
           { path: "/results", changefreq: "weekly", priority: "0.8" },
           { path: "/about", changefreq: "monthly", priority: "0.6" },
-          { path: "/report/acme", changefreq: "monthly", priority: "0.5" },
+          { path: "/auth", changefreq: "monthly", priority: "0.5" },
+          { path: "/report/acme", changefreq: "monthly", priority: "0.4" },
         ];
         const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
