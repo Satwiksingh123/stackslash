@@ -1,6 +1,7 @@
 {
   "name": "stackslash",
   "private": true,
+  "description": "AI spend audit platform for engineering teams",
   "sideEffects": false,
   "type": "module",
   "scripts": {
