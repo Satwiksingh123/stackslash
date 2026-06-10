@@ -64,6 +64,20 @@ src/
     └── ...             # Public routes (index, about, auth, report)
 ```
 
+## Deployment
+
+### Cloudflare Workers
+
+```bash
+# Build for production
+bun run build
+
+# Deploy to Cloudflare Workers
+bunx wrangler deploy
+```
+
+Set environment variables in the Cloudflare dashboard under **Workers & Pages → Your Worker → Settings → Variables**. The `SUPABASE_SERVICE_ROLE_KEY` and `GEMINI_API_KEY` should be stored as encrypted secrets.
+
 ## License
 
 MIT
