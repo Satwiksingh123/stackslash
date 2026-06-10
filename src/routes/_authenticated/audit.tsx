@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { AnimatePresence, motion } from "framer-motion";
@@ -88,7 +88,7 @@ function AuditPage() {
     });
   };
 
-  const updateEntry = (toolId: string, patch: Partial<Entry>) => {
+  const updateEntry = useCallback((toolId: string, patch: Partial<Entry>) => {
     const tool = TOOLS.find((t) => t.id === toolId)!;
     setEntries((e) => ({
       ...e,
@@ -101,7 +101,7 @@ function AuditPage() {
         ...patch,
       },
     }));
-  };
+  }, []);
 
   const totalSpend = Object.values(entries)
     .filter((e) => selected.has(e.tool.id))
